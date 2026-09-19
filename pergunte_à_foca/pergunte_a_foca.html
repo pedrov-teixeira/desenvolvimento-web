@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunte à foca</title>
+    <style>
+        button {
+            background-color: #6d7e84;
+        }
+
+        body {
+            background-color: #cdccc4;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pergunte à foca</h1>
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFru3u94SZme7u5foE011gI_lHXiRcwaF5CQWrcAvOuFtIae_taATdRl71&s=10" alt="Imagem de uma Foca" height="380px">
+    
+    <div>
+        <input type="text" class="input1"> ou <input type="text" class="input2">
+    </div>
+
+    <button type="button" onclick="sorteioFoca()"> Perguntar </button>
+
+    <script>
+        function sorteioFoca(){
+            var escolha = Math.floor(Math.random() * 10);
+            if (escolha % 2)
+                alert("A foca escolheu "+document.querySelector(".input1").value)
+            else
+                alert("A foca escolheu "+document.querySelector(".input2").value)
+        }
+    </script>
+</body>
+</html>
